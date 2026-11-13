@@ -70,3 +70,40 @@ button { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+
+/* Product interface art and case-study motion */
+.screen-window{animation:screen-rise .75s cubic-bezier(.2,.8,.2,1) both;transform-origin:70% 50%}
+.screen-line{stroke-dasharray:340;stroke-dashoffset:340;animation:line-draw 2.2s .25s ease-out forwards}
+.screen-route{animation:route-flow 18s linear infinite}
+.screen-pulse{animation:signal-pulse 2.3s ease-in-out infinite}
+.screen-orbit{animation:orbit-soft 26s linear infinite}
+@keyframes screen-rise{from{opacity:0;transform:translate3d(0,18px,0) scale(.985)}to{opacity:1;transform:translate3d(0,0,0) scale(1)}}
+@keyframes line-draw{to{stroke-dashoffset:0}}
+@keyframes route-flow{to{stroke-dashoffset:-90}}
+@keyframes signal-pulse{0%,100%{box-shadow:0 0 0 4px rgba(255,255,255,.08)}50%{box-shadow:0 0 0 8px rgba(255,255,255,.035),0 0 0 13px rgba(255,255,255,.012)}}
+@keyframes orbit-soft{to{transform:rotate(360deg)}}
+.deep-dive-section{scroll-margin-top:100px}
+.deep-tabs{display:flex;gap:4px;overflow-x:auto;border-bottom:1px solid rgba(255,255,255,.12);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.deep-tabs::-webkit-scrollbar{display:none}
+.deep-tab{position:relative;display:flex;align-items:center;justify-content:space-between;gap:18px;min-width:max-content;padding:16px 18px;color:rgba(255,255,255,.42);font-size:11px;text-align:left;transition:color .2s ease,background .2s ease}
+.deep-tab:hover{color:rgba(255,255,255,.82);background:rgba(255,255,255,.025)}
+.deep-tab-active{color:#f0efe8}
+.deep-tab-number{font-family:"IBM Plex Mono",monospace;font-size:9px;color:rgba(255,255,255,.25)}
+.deep-tab-indicator{position:absolute;right:12px;bottom:-1px;left:12px;height:2px;background:#c4f36a}
+.deep-panel{min-height:420px;padding-block:36px 12px}
+.deep-feature-card{position:relative;overflow:hidden;min-height:340px;padding:28px;border:1px solid rgba(255,255,255,.12);background:radial-gradient(ellipse at 90% 8%,rgba(196,243,106,.12),transparent 45%),linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.008))}
+.deep-feature-card::after{content:"";position:absolute;right:-65px;bottom:-95px;width:230px;height:230px;border:1px solid rgba(196,243,106,.14);border-radius:50%;pointer-events:none}
+.deep-user-card,.deep-decision-card,.deep-signal-card{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.018);padding:18px;transition:border-color .25s ease,transform .25s ease,background .25s ease}
+.deep-user-card:hover,.deep-decision-card:hover,.deep-signal-card:hover{border-color:rgba(196,243,106,.3);transform:translateY(-2px);background:rgba(255,255,255,.035)}
+.journey-track{position:relative;padding-left:4px}
+.journey-step{position:relative;display:flex;gap:18px;min-height:76px}
+.journey-marker{position:relative;z-index:1;display:flex;width:34px;height:34px;flex:0 0 34px;align-items:center;justify-content:center;border:1px solid rgba(196,243,106,.35);border-radius:50%;background:#151916;color:#c4f36a;font-family:"IBM Plex Mono",monospace;font-size:9px}
+.journey-step:not(:last-child) .journey-marker::after{content:"";position:absolute;top:34px;left:16px;width:1px;height:42px;background:linear-gradient(rgba(196,243,106,.42),rgba(255,255,255,.05))}
+.journey-arrow{position:absolute;bottom:15px;left:10px;color:rgba(196,243,106,.5)}
+.architecture-stack{display:grid;gap:10px}
+.architecture-layer{position:relative;display:flex;align-items:flex-start;gap:16px;padding:20px;border:1px solid rgba(255,255,255,.11);background:linear-gradient(110deg,rgba(255,255,255,.035),rgba(255,255,255,.008))}
+.architecture-layer-index{display:flex;width:29px;height:29px;flex:0 0 29px;align-items:center;justify-content:center;border:1px solid rgba(196,243,106,.28);color:#c4f36a;font-family:"IBM Plex Mono",monospace;font-size:9px}
+.architecture-layer-signal{width:7px;height:7px;flex:0 0 7px;margin-top:6px;border-radius:50%;background:#c4f36a;box-shadow:0 0 14px rgba(196,243,106,.42)}
+@media(max-width:640px){.deep-tab{padding:14px 12px;gap:10px;font-size:10px}.deep-panel{min-height:0;padding-top:25px}.deep-feature-card{min-height:300px;padding:22px}}
+@media(prefers-reduced-motion:reduce){.screen-window,.screen-line,.screen-route,.screen-pulse,.screen-orbit{animation:none!important}.deep-user-card,.deep-decision-card,.deep-signal-card{transition:none!important}}
