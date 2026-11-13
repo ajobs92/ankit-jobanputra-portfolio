@@ -107,3 +107,17 @@ button { cursor: pointer; }
 .architecture-layer-signal{width:7px;height:7px;flex:0 0 7px;margin-top:6px;border-radius:50%;background:#c4f36a;box-shadow:0 0 14px rgba(196,243,106,.42)}
 @media(max-width:640px){.deep-tab{padding:14px 12px;gap:10px;font-size:10px}.deep-panel{min-height:0;padding-top:25px}.deep-feature-card{min-height:300px;padding:22px}}
 @media(prefers-reduced-motion:reduce){.screen-window,.screen-line,.screen-route,.screen-pulse,.screen-orbit{animation:none!important}.deep-user-card,.deep-decision-card,.deep-signal-card{transition:none!important}}
+
+
+/* Visual Lab */
+.visual-hero{isolation:isolate;border-radius:3px;background-image:linear-gradient(115deg,rgba(18,23,19,.98) 0%,rgba(24,33,25,.96) 52%,rgba(34,48,35,.85) 100%)}
+.visual-hero-glow{position:absolute;inset:-30%;z-index:-1;background:radial-gradient(ellipse at 78% 22%,rgba(196,243,106,.17),transparent 34%),radial-gradient(ellipse at 25% 95%,rgba(96,130,105,.16),transparent 35%);filter:blur(16px);pointer-events:none}
+.visual-hero-orbit{position:absolute;z-index:0;right:10%;top:50%;width:220px;height:220px;border:1px solid rgba(196,243,106,.12);border-radius:50%;transform:translateY(-50%);pointer-events:none}
+.visual-hero-orbit-one{animation:orbit-soft 42s linear infinite}
+.visual-hero-orbit-two{right:6%;width:290px;height:290px;border-color:rgba(196,243,106,.07);animation:orbit-soft 58s linear infinite reverse}
+.visual-card{min-width:0;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.008));padding:12px;transition:border-color .3s ease,background .3s ease,transform .3s ease}
+.visual-card:hover{border-color:rgba(196,243,106,.32);background:rgba(255,255,255,.035);transform:translateY(-3px)}
+.visual-card .project-art{transition:box-shadow .35s ease,transform .45s cubic-bezier(.2,.8,.2,1)}
+.visual-card:hover .project-art{box-shadow:0 22px 55px rgba(0,0,0,.22);transform:scale(.992)}
+@media(max-width:640px){.visual-hero{padding:22px}.visual-hero-orbit{right:-22%;opacity:.65}.visual-hero-orbit-two{right:-35%;opacity:.45}.visual-card{padding:9px}}
+@media(prefers-reduced-motion:reduce){.visual-hero-orbit-one,.visual-hero-orbit-two{animation:none}.visual-card,.visual-card .project-art{transition:none}.visual-card:hover{transform:none}}
