@@ -15,13 +15,13 @@ export const projects: Project[] = [
   {
     number: "02", slug: "servertra-funding-platform", title: "Servertra Business Growth Ecosystem",
     category: "Business Services / Digital Platform", discipline: ["SaaS & Enterprise", "GovTech", "Operations"],
-    status: "Live website", summary: "A public-facing business support platform that brings setup, compliance, certifications, funding and growth services into one customer journey.",
-    problem: "Founders and growing businesses often coordinate registration, compliance, certifications, funding support and digital needs across different providers.",
-    solution: "A clear business-services experience organised around the journey from idea and setup through certification, funding, growth and scale.",
-    capabilities: ["Business registration and setup", "Compliance and legal support", "Certifications and funding support", "Digital transformation and growth consulting", "Structured enquiry and service journey"],
-    role: "Product and website initiative; exact personal contribution and delivery scope to be documented with the owner",
-    evidenceNote: "Public website: servertra.com. Its current public-facing content describes business registration, compliance, certifications, funding and finance, digital transformation and growth support. The scheme explorer and eligibility calculator are separate proposed extensions, not claims about the live website.",
-    accent: "#B9D7C6", visual: "servertra", liveUrl: "https://servertra.com", prototypeUrl: "/playground/servertra-funding"
+    status: "Live website", summary: "A live business advisory and technology platform connecting business setup, compliance, government scheme discovery, eligibility guidance and digital solutions.",
+    problem: "Indian founders and growing businesses face a fragmented journey across registrations, certifications, compliance, government support and technology needs. Finding the right service or scheme often means navigating multiple disconnected sources.",
+    solution: "A unified digital front door that organises advisory services, central and state government scheme information, a preliminary eligibility journey and technology services around the needs of a growing business.",
+    capabilities: ["Business setup, registrations and incorporation", "Compliance, certifications and advisory services", "Central and state government scheme discovery", "State-wise scheme exploration across 36 States and UTs", "Preliminary scheme eligibility checker", "IT solutions and digital transformation", "Structured enquiry and lead capture"],
+    role: "Product strategy, information architecture, UX and website implementation",
+    evidenceNote: "The supplied Servertra V11 deployment package contains the pre-rendered home, services, government-schemes, eligibility-checker, IT-solutions, about and contact pages, along with compiled assets and the lead enquiry endpoint. The homepage snapshot states 36 States and UTs, 18 schemes, 8 official sources and 6 service categories. The site presents scheme information for guidance; official authorities and lenders retain control over eligibility decisions and approvals. Live data refresh and government API integrations have not been independently verified.",
+    accent: "#B9D7C6", visual: "servertra", liveUrl: "https://servertra.com"
   },
   {
     number: "03", slug: "education-360", title: "Education 360",
