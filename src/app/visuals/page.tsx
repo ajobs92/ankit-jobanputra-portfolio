@@ -7,7 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default function VisualsPage() {
-  return <div className="container-shell py-14 md:py-20">
-    <VisualGallery/>
-  </main>;
+  return (
+    <div className="container-shell py-14 md:py-20">
+      <VisualGallery />
+    </div>
+  );
 }
