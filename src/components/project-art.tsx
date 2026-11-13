@@ -2,11 +2,9 @@ import type { ReactNode } from "react";
 import type { Project } from "@/types/project";
 
 const palettes: Record<string, { ink: string; mid: string; glow: string }> = {
-  ledger: { ink: "#18271f", mid: "#486b54", glow: "#c4f36a" },
+  ledger: { ink: "#18271f", mid: "#486b54", glow: "#d3bd91" },
   civic: { ink: "#25203a", mid: "#776b9e", glow: "#d6c8ff" },
-  education: { ink: "#172d46", mid: "#476d9b", glow: "#a9c9ff" },
-  mobility: { ink: "#31251e", mid: "#8b6344", glow: "#f4b183" },
-  document: { ink: "#252c20", mid: "#647b43", glow: "#c4f36a" },
+  document: { ink: "#252c20", mid: "#647b43", glow: "#d3bd91" },
   agents: { ink: "#22263c", mid: "#6975a6", glow: "#b7c5ff" },
   crm: { ink: "#392532", mid: "#8e6079", glow: "#e9b6d1" },
   health: { ink: "#18312e", mid: "#4e807a", glow: "#9dddd1" },
@@ -18,14 +16,14 @@ const palettes: Record<string, { ink: string; mid: string; glow: string }> = {
   talent: { ink: "#30253c", mid: "#806998", glow: "#d7b9ff" },
   security: { ink: "#302326", mid: "#895b61", glow: "#e6a5a5" },
   city: { ink: "#1c3039", mid: "#537e8d", glow: "#9bc9d9" },
-  finance: { ink: "#202c21", mid: "#718b50", glow: "#c4f36a" }
+  finance: { ink: "#202c21", mid: "#718b50", glow: "#d3bd91" }
 };
 
 function Dot({ color = "rgba(255,255,255,.28)" }: { color?: string }) {
   return <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ background: color }}/>;
 }
 
-function Tag({ children, color = "#c4f36a" }: { children: ReactNode; color?: string }) {
+function Tag({ children, color = "#d3bd91" }: { children: ReactNode; color?: string }) {
   return <span className="inline-flex items-center gap-1 rounded-sm border px-1.5 py-1 text-[8px] leading-none" style={{ color, borderColor: color + "55", background: color + "12" }}>{children}</span>;
 }
 
@@ -65,32 +63,6 @@ function LedgerScreen({ accent }: { accent: string }) {
     </div>
     <div className="mt-2 flex justify-between border-t border-white/10 pt-2 text-[8px] text-white/35"><span>Posting controls</span><span>Audit trail available</span></div>
   </div></div>;
-}
-
-function EducationScreen({ accent }: { accent: string }) {
-  return <div className="flex gap-3"><Sidebar accent={accent} items={["My classroom","Timetable","Attendance","Assignments","Learning","Messages"]}/><div className="min-w-0 flex-1">
-    <PanelTitle title="Good morning, educator" sub="Your day at a glance · Demo institution"/>
-    <div className="grid grid-cols-[1.3fr_.7fr] gap-2">
-      <div className="rounded-sm border border-white/10 p-2"><PanelTitle title="Today’s timetable"/>{["09:00  Mathematics · Room 04","10:30  Science · Lab 02","12:00  Design · Studio"].map((x,i)=><div key={x} className="mb-1.5 flex gap-2 rounded-sm bg-white/[.035] p-2 text-[8px] text-white/65"><span style={{ color: accent }}>0{i+1}</span>{x}</div>)}</div>
-      <div className="rounded-sm border border-white/10 p-2"><PanelTitle title="Class pulse"/><div className="mx-auto mt-2 flex h-14 w-14 items-center justify-center rounded-full border-[5px] text-center font-mono text-[9px]" style={{ borderColor: accent + "55", borderTopColor: accent, color: accent }}>TODAY</div><p className="mt-2 text-center text-[8px] text-white/35">Attendance review</p></div>
-    </div>
-    <div className="mt-2 rounded-sm border border-white/10 p-2"><PanelTitle title="Recent learning activity"/>{["Assignment feedback","New class material","Guardian acknowledgement"].map(x=><div key={x} className="mb-2 flex items-center justify-between text-[8px] text-white/55"><span>{x}</span><Tag color={accent}>Updated</Tag></div>)}</div>
-  </div></div>;
-}
-
-function MobilityScreen({ accent }: { accent: string }) {
-  return <div className="flex gap-3"><div className="min-w-0 flex-1">
-    <PanelTitle title="Fleet command" sub="Operational map · Illustrative routes"/>
-    <div className="relative h-[142px] overflow-hidden rounded-sm border border-white/10 bg-[#192b2a]">
-      <svg viewBox="0 0 360 160" preserveAspectRatio="none" className="absolute inset-0 h-full w-full opacity-40"><path d="M0 35 L95 20 L152 55 L220 18 L360 40 M0 95 L75 75 L135 110 L215 80 L360 120 M40 0 L55 160 M150 0 L170 160 M275 0 L250 160" stroke="#d6e3d7" strokeWidth="1" fill="none"/><path d="M-10 142 C60 95 86 126 142 70 S248 80 365 12" stroke={accent} strokeWidth="2.5" strokeDasharray="6 4" fill="none" className="screen-route"/></svg>
-      <span className="absolute left-[17%] top-[52%] h-3 w-3 rounded-full border-2 border-white bg-[#d9a56f] shadow-[0_0_0_5px_rgba(217,165,111,.15)]"/>
-      <span className="screen-pulse absolute left-[52%] top-[37%] h-3 w-3 rounded-full border-2 border-white shadow-[0_0_0_5px_rgba(255,255,255,.12)]" style={{ background: accent }}/>
-      <span className="absolute right-[14%] top-[18%] h-3 w-3 rounded-full border-2 border-white bg-[#94b8a1]"/>
-      <span className="absolute bottom-2 left-2 rounded-sm bg-black/35 px-2 py-1 font-mono text-[8px] text-white/60">ZONE / NORTH SECTOR</span>
-      <span className="absolute right-2 top-2 rounded-sm bg-black/35 px-2 py-1 text-[8px] text-white/55">Map layers · 03</span>
-    </div>
-    <div className="mt-2 flex flex-wrap gap-1.5"><Tag color={accent}>On route</Tag><Tag color="#e7c77d">Needs review</Tag><Tag color="#a9c9ff">Signal stale</Tag></div>
-  </div><div className="w-[30%] shrink-0"><PanelTitle title="Dispatch queue" sub="Priority exceptions"/>{["Late arrival","Vehicle service","Reassignment"].map((x,i)=><div key={x} className="mb-2 rounded-sm border border-white/10 p-2"><Dot color={[accent,"#e7c77d","#b7c5ff"][i]}/><p className="mt-1 text-[9px] text-white/75">{x}</p><p className="mt-1 text-[8px] text-white/30">Review details →</p></div>)}</div></div>;
 }
 
 function CivicScreen({ accent }: { accent: string }) {
@@ -204,8 +176,6 @@ function FinanceScreen({ accent }: { accent: string }) {
 function ProductScreen({ project, accent }: { project: Project; accent: string }) {
   switch (project.visual) {
     case "ledger": return <LedgerScreen accent={accent}/>;
-    case "education": return <EducationScreen accent={accent}/>;
-    case "mobility": return <MobilityScreen accent={accent}/>;
     case "civic": return <CivicScreen accent={accent}/>;
     case "document": return <RfpScreen accent={accent}/>;
     case "agents": return <AgentScreen accent={accent}/>;
@@ -226,7 +196,7 @@ function ProductScreen({ project, accent }: { project: Project; accent: string }
 
 export function ProjectArt({ project, compact = false }: { project: Project; compact?: boolean }) {
   if (project.visual === "servertra") {
-    return <div className={"relative isolate overflow-hidden rounded-[3px] border border-[#123b32]/25 bg-[#f6f3eb] " + (compact ? "h-32" : "h-56 md:h-72")}>
+    return <div className={"relative isolate overflow-hidden rounded-[3px] border border-[#123b32]/25 bg-[#f6f3eb] " + (compact ? "h-48 md:h-56" : "h-56 md:h-72")}>
       <div className="absolute inset-y-0 right-0 w-[64%]"><img src="https://servertra.com/img/hero/hero-arches-1200.webp" alt="Original Servertra website hero artwork" className="h-full w-full object-cover object-center" loading="lazy"/></div>
       <div className="absolute inset-y-0 left-0 w-[75%] bg-gradient-to-r from-[#123b32] via-[#123b32]/95 to-[#123b32]/0"/>
       <div className="absolute left-[7%] top-[16%] max-w-[62%]"><p className="font-mono text-[9px] tracking-[.2em] text-[#d7c28c]">LIVE WEBSITE / SERVERTRA</p><p className={"mt-3 font-serif leading-[.98] tracking-[-.055em] text-[#f6f3eb] " + (compact ? "text-xl" : "text-3xl md:text-4xl")}>Build.<br/>Comply.<br/>Fund. Grow.</p>{!compact && <p className="mt-3 max-w-[250px] text-[10px] leading-5 text-[#f6f3eb]/70">A unified advisory and technology partner for businesses across India.</p>}</div>
@@ -234,7 +204,7 @@ export function ProjectArt({ project, compact = false }: { project: Project; com
     </div>;
   }
   const palette = palettes[project.visual] ?? palettes.ledger;
-  return <div className={"project-art relative isolate overflow-hidden rounded-[3px] border border-white/10 " + (compact ? "h-32" : "h-[330px] md:h-[440px]")} style={{ background: "radial-gradient(ellipse at 76% 20%, " + palette.mid + "72 0%, transparent 37%), linear-gradient(135deg," + palette.ink + ",#111513 76%)" }}>
+  return <div className={"project-art relative isolate overflow-hidden rounded-[3px] border border-white/10 " + (compact ? "h-48 md:h-56" : "h-[330px] md:h-[440px]")} style={{ background: "radial-gradient(ellipse at 76% 20%, " + palette.mid + "72 0%, transparent 37%), linear-gradient(135deg," + palette.ink + ",#111513 76%)" }}>
     <div className="absolute inset-0 opacity-[.12]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.18) 1px,transparent 1px)", backgroundSize: "32px 32px" }}/>
     <div className="absolute inset-0 noise"/>
     <div className={"absolute left-[6%] z-10 max-w-[32%] " + (compact ? "top-[19%]" : "top-[16%]")}>
