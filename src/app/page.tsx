@@ -68,7 +68,7 @@ export default function Home() {
       <div className="container-shell">
         <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div><p className="eyebrow">02 / SELECTED WORK</p><h2 className="section-title mt-4">Problems worth<br/>making progress on.</h2></div>
-          <Link href="/work" className="inline-flex items-center gap-2 text-xs uppercase tracking-[.1em] text-[#c4f36a]">View all 18 projects <ArrowUpRight size={15}/></Link>
+          <div className="flex flex-wrap gap-5"><Link href="/work" className="inline-flex items-center gap-2 text-xs uppercase tracking-[.1em] text-[#c4f36a]">View all 18 projects <ArrowUpRight size={15}/></Link><Link href="/visuals" className="inline-flex items-center gap-2 text-xs uppercase tracking-[.1em] text-white/50 transition hover:text-[#c4f36a]">Explore Visual Lab <ArrowUpRight size={15}/></Link></div>
         </div>
         <div className="grid gap-4 md:grid-cols-2">{featured.map((project, i) => <ProjectCard key={project.slug} project={project} featured={i === 0}/>)}</div>
       </div>
