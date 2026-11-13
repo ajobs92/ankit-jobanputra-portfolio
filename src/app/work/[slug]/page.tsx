@@ -35,8 +35,8 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   return (
     <article className="container-shell py-12 md:py-20">
       <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
-        <Link href="/work" className="inline-flex items-center gap-2 text-xs text-white/50 transition hover:text-[#c4f36a]"><ArrowLeft size={14}/> All projects</Link>
-        <p className="font-mono text-[9px] uppercase tracking-[.16em] text-white/30">CASE FILE / {project.number} OF 18</p>
+        <Link href="/work" className="inline-flex items-center gap-2 text-xs text-white/50 transition hover:text-[#d3bd91]"><ArrowLeft size={14}/> All projects</Link>
+        <p className="font-mono text-[9px] uppercase tracking-[.16em] text-white/30">CASE FILE / {project.number} OF {projects.length}</p>
       </div>
 
       <div className="grid gap-10 lg:grid-cols-[1fr_280px]">
@@ -45,7 +45,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           <h1 className="display-title mt-6 max-w-5xl text-[clamp(3rem,8vw,7rem)]">{project.title}<span className="accent-text">.</span></h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-white/55">{project.summary}</p>
           <div className="mt-7 flex flex-wrap items-center gap-2">
-            <span className="rounded-full border border-[#c4f36a]/30 bg-[#c4f36a]/[.06] px-3 py-1.5 text-[9px] uppercase tracking-[.12em] text-[#c4f36a]">{project.status}</span>
+            <span className="rounded-full border border-[#d3bd91]/30 bg-[#d3bd91]/[.06] px-3 py-1.5 text-[9px] uppercase tracking-[.12em] text-[#d3bd91]">{project.status}</span>
             {project.discipline.map(item => <span key={item} className="rounded-full border border-white/10 px-3 py-1.5 text-[9px] text-white/45">{item}</span>)}
           </div>
         </div>
@@ -56,7 +56,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           <div><p className="text-[9px] uppercase tracking-[.14em] text-white/30">Role / contribution</p><p className="mt-2 text-xs leading-6 text-white/60">{project.role}</p></div>
           <div className="my-4 border-t border-white/10"/>
           <div><p className="text-[9px] uppercase tracking-[.14em] text-white/30">Portfolio lens</p><p className="mt-2 text-xs leading-6 text-white/60">{detail ? "Product strategy · UX · System design" : "Live website · Digital platform"}</p></div>
-          {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#c4f36a] px-4 py-3 text-[10px] font-semibold text-[#111312] transition hover:bg-[#d8ff8c]">Visit live website <ExternalLink size={13}/></a>}
+          {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#d3bd91] px-4 py-3 text-[10px] font-semibold text-[#111312] transition hover:bg-[#ead9b6]">Visit live website <ExternalLink size={13}/></a>}
         </aside>
       </div>
 
@@ -71,7 +71,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         </div>
         <div className="space-y-8">
           <div><p className="text-sm leading-8 text-white/60">{project.problem}</p></div>
-          <div className="border-l border-[#c4f36a]/50 pl-5">
+          <div className="border-l border-[#d3bd91]/50 pl-5">
             <p className="eyebrow">PRODUCT DIRECTION</p>
             <p className="mt-3 text-base leading-8 text-white/75">{project.solution}</p>
           </div>
@@ -84,8 +84,8 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           <p className="max-w-xs text-xs leading-6 text-white/35">The capability map is organised around user work, not a flat feature checklist.</p>
         </div>
         <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {project.capabilities.map((item, i) => <div key={item} className="group flex gap-3 border border-white/10 bg-white/[.018] p-4 transition hover:border-[#c4f36a]/30">
-            <span className="font-mono text-[9px] text-[#c4f36a]">0{i + 1}</span><span className="text-xs leading-6 text-white/65">{item}</span>
+          {project.capabilities.map((item, i) => <div key={item} className="group flex gap-3 border border-white/10 bg-white/[.018] p-4 transition hover:border-[#d3bd91]/30">
+            <span className="font-mono text-[9px] text-[#d3bd91]">0{i + 1}</span><span className="text-xs leading-6 text-white/65">{item}</span>
           </div>)}
         </div>
       </section>
@@ -102,7 +102,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             ["02 / GOVTECH","Government scheme explorer","https://servertra.com/government-schemes"],
             ["03 / ELIGIBILITY","Eligibility checker","https://servertra.com/eligibility-checker"],
             ["04 / TECHNOLOGY","IT solutions","https://servertra.com/it-solutions"]
-          ].map(([label,title,url]) => <a key={label} href={url} target="_blank" rel="noreferrer" className="border border-white/10 p-4 transition hover:border-[#c4f36a]/50"><span className="eyebrow">{label}</span><span className="mt-3 block text-sm text-white">{title} ↗</span></a>)}
+          ].map(([label,title,url]) => <a key={label} href={url} target="_blank" rel="noreferrer" className="border border-white/10 p-4 transition hover:border-[#d3bd91]/50"><span className="eyebrow">{label}</span><span className="mt-3 block text-sm text-white">{title} ↗</span></a>)}
         </div>
         <div className="mt-12 grid gap-8 border-t border-white/10 pt-8 md:grid-cols-[.65fr_1.35fr]">
           <div><p className="eyebrow">04 / CONTINUOUS IMPROVEMENT</p><h3 className="mt-3 text-2xl tracking-[-.04em]">Make guidance easier to trust and act on.</h3></div>
@@ -113,14 +113,14 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
       <section className="mt-16 grid gap-5 border-t border-white/10 pt-8 md:grid-cols-[.45fr_1.55fr]">
         <div><p className="eyebrow">EVIDENCE & SCOPE</p><h2 className="mt-3 text-xl tracking-[-.04em]">What is known today.</h2></div>
         <div className="flex gap-3 border border-white/10 bg-white/[.02] p-5">
-          <CheckCircle2 size={16} className="mt-1 shrink-0 text-[#c4f36a]"/>
+          <CheckCircle2 size={16} className="mt-1 shrink-0 text-[#d3bd91]"/>
           <p className="text-xs leading-7 text-white/55">{project.evidenceNote}</p>
         </div>
       </section>
 
       <div className="mt-20 flex flex-col justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-end">
         <div><p className="eyebrow">UP NEXT / {next.number}</p><h2 className="mt-3 max-w-xl text-3xl tracking-[-.05em]">{next.title}<span className="accent-text">.</span></h2></div>
-        <Link href={`/work/${next.slug}`} className="inline-flex items-center gap-2 self-start rounded-full border border-white/20 px-5 py-3 text-xs text-white/65 transition hover:border-[#c4f36a] hover:text-[#c4f36a] sm:self-auto">Explore next case study <ArrowUpRight size={14}/></Link>
+        <Link href={`/work/${next.slug}`} className="inline-flex items-center gap-2 self-start rounded-full border border-white/20 px-5 py-3 text-xs text-white/65 transition hover:border-[#d3bd91] hover:text-[#d3bd91] sm:self-auto">Explore next case study <ArrowUpRight size={14}/></Link>
       </div>
     </article>
   );
