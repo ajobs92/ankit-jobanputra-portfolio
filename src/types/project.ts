@@ -1,4 +1,4 @@
-export type ProjectStatus = "In progress" | "Professional case study" | "Concept";
+export type ProjectStatus = "In progress" | "Live website" | "Professional case study" | "Concept";
 
 export type Project = {
   number: string;
@@ -15,6 +15,8 @@ export type Project = {
   evidenceNote: string;
   accent: string;
   visual: string;
+  liveUrl?: string;
+  prototypeUrl?: string;
 };
 
 export type ProjectFilter = "All" | "AI & ML" | "SaaS & Enterprise" | "GovTech" | "FinTech" | "Operations";
