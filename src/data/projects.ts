@@ -13,15 +13,15 @@ export const projects: Project[] = [
     accent: "#C4F36A", visual: "ledger"
   },
   {
-    number: "02", slug: "servertra-funding-platform", title: "Government Funding Platform",
-    category: "GovTech / Business Advisory", discipline: ["GovTech", "SaaS & Enterprise"],
-    status: "In progress", summary: "A discovery and eligibility experience for businesses navigating central and state support schemes.",
-    problem: "Business owners face fragmented scheme information, complex eligibility rules and unclear documentation requirements.",
-    solution: "A guided discovery platform combining scheme exploration, structured eligibility questions and application preparation.",
-    capabilities: ["Central and state scheme discovery", "State-led navigation", "Eligibility calculator concept", "Document checklist", "Scheme and application workflows"],
-    role: "Product concept, business workflows, website strategy and prototyping",
-    evidenceNote: "Based on Servertra product and website work. Live government data integrations and scheme accuracy must be validated before claiming production capability.",
-    accent: "#B9D7C6", visual: "civic"
+    number: "02", slug: "servertra-funding-platform", title: "Servertra Business Growth Ecosystem",
+    category: "Business Services / Digital Platform", discipline: ["SaaS & Enterprise", "GovTech", "Operations"],
+    status: "Live website", summary: "A public-facing business support platform that brings setup, compliance, certifications, funding and growth services into one customer journey.",
+    problem: "Founders and growing businesses often coordinate registration, compliance, certifications, funding support and digital needs across different providers.",
+    solution: "A clear business-services experience organised around the journey from idea and setup through certification, funding, growth and scale.",
+    capabilities: ["Business registration and setup", "Compliance and legal support", "Certifications and funding support", "Digital transformation and growth consulting", "Structured enquiry and service journey"],
+    role: "Product and website initiative; exact personal contribution and delivery scope to be documented with the owner",
+    evidenceNote: "Public website: servertra.com. Its current public-facing content describes business registration, compliance, certifications, funding and finance, digital transformation and growth support. The scheme explorer and eligibility calculator are separate proposed extensions, not claims about the live website.",
+    accent: "#B9D7C6", visual: "servertra", liveUrl: "https://servertra.com", prototypeUrl: "/playground/servertra-funding"
   },
   {
     number: "03", slug: "education-360", title: "Education 360",
