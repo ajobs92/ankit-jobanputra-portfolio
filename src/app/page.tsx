@@ -32,8 +32,8 @@ export default function Home() {
           </div>
         </div>
         <div className="relative mx-auto aspect-square w-full max-w-[440px]">
-          <div className="absolute inset-[8%] rounded-full border border-white/10"/>
-          <div className="absolute inset-[18%] rounded-full border border-dashed border-[#c4f36a]/35"/>
+          <div className="orbit-one absolute inset-[8%] rounded-full border border-white/10"/>
+          <div className="orbit-two absolute inset-[18%] rounded-full border border-dashed border-[#c4f36a]/35"/>
           <div className="absolute inset-[30%] rounded-full border border-white/15"/>
           <div className="absolute inset-[39%] flex items-center justify-center rounded-full bg-[#c4f36a] text-center text-[#111312] shadow-[0_0_90px_#c4f36a22]">
             <div><span className="font-mono text-[9px] tracking-[.15em]">BUSINESS</span><div className="my-1 text-2xl font-medium tracking-[-.08em]">×</div><span className="font-mono text-[9px] tracking-[.15em]">PRODUCT</span></div>
