@@ -11,6 +11,8 @@ export function VisualGallery() {
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");
   const reduceMotion = useReducedMotion();
+  const liveWebsiteCount = projects.filter((project) => project.status === "Live website").length;
+  const productStudyCount = projects.length - liveWebsiteCount;
 
   const filtered = useMemo(() => {
     const term = query.trim().toLowerCase();
@@ -32,8 +34,8 @@ export function VisualGallery() {
         </div>
         <div className="grid grid-cols-3 border-y border-white/15 py-5">
           <div className="pr-3"><p className="font-serif text-3xl text-white md:text-4xl">18</p><p className="mt-1 text-[8px] uppercase tracking-[.13em] text-white/35 md:text-[9px]">Projects</p></div>
-          <div className="border-l border-white/10 px-3"><p className="font-serif text-3xl text-white md:text-4xl">17</p><p className="mt-1 text-[8px] uppercase tracking-[.13em] text-white/35 md:text-[9px]">Product studies</p></div>
-          <div className="border-l border-white/10 pl-3"><p className="font-serif text-3xl text-white md:text-4xl">01</p><p className="mt-1 text-[8px] uppercase tracking-[.13em] text-white/35 md:text-[9px]">Live website</p></div>
+          <div className="border-l border-white/10 px-3"><p className="font-serif text-3xl text-white md:text-4xl">{productStudyCount.toString().padStart(2,"0")}</p><p className="mt-1 text-[8px] uppercase tracking-[.13em] text-white/35 md:text-[9px]">Product studies</p></div>
+          <div className="border-l border-white/10 pl-3"><p className="font-serif text-3xl text-white md:text-4xl">{liveWebsiteCount.toString().padStart(2,"0")}</p><p className="mt-1 text-[8px] uppercase tracking-[.13em] text-white/35 md:text-[9px]">Live website</p></div>
         </div>
       </div>
       <div className="visual-hero-orbit visual-hero-orbit-one"/>
