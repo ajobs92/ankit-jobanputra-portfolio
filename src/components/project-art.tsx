@@ -30,6 +30,21 @@ function MiniBars({count=6}:{count?:number}) {
 export function ProjectArt({project,compact=false}:{project:Project;compact?:boolean}) {
   const colors=palettes[project.visual] ?? palettes.ledger;
   const v=project.visual;
+  if (v === "servertra") {
+    return <div className={"relative isolate overflow-hidden rounded-[3px] border border-[#123b32]/25 bg-[#f6f3eb] " + (compact ? "h-32" : "h-56 md:h-72")}>
+      <div className="absolute inset-y-0 right-0 w-[64%]">
+        <img src="https://servertra.com/img/hero/hero-arches-1200.webp" alt="Original Servertra website hero artwork" className="h-full w-full object-cover object-center" loading="lazy"/>
+      </div>
+      <div className="absolute inset-y-0 left-0 w-[75%] bg-gradient-to-r from-[#123b32] via-[#123b32]/95 to-[#123b32]/0"/>
+      <div className="absolute left-[7%] top-[16%] max-w-[62%]">
+        <p className="font-mono text-[7px] tracking-[.2em] text-[#d7c28c]">LIVE WEBSITE / SERVERTRA</p>
+        <p className={"mt-3 font-serif leading-[.98] tracking-[-.055em] text-[#f6f3eb] " + (compact ? "text-xl" : "text-3xl md:text-4xl")}>Build.<br/>Comply.<br/>Fund. Grow.</p>
+        {!compact && <p className="mt-3 max-w-[250px] text-[10px] leading-5 text-[#f6f3eb]/70">A unified advisory and technology partner for businesses across India.</p>}
+      </div>
+      <div className="absolute bottom-3 left-[7%] font-mono text-[7px] tracking-[.15em] text-[#f6f3eb]/50">SECURE · SWIFT · SCALABLE</div>
+      <div className="absolute bottom-3 right-4 font-mono text-[9px] text-[#123b32]/70">SERVERTRA.COM</div>
+    </div>;
+  }
   let preview:ReactNode;
 
   if(v==="ledger") preview=<><div className="grid grid-cols-3 gap-1">{["Revenue","Expenses","Cash"].map((x,i)=><div key={x} className="rounded-sm bg-white/[.06] p-1"><p className="text-[5px] text-white/40">{x}</p><p className="mt-1 text-[8px] text-white">$ {["82.4k","31.8k","50.6k"][i]}</p></div>)}</div><div className="mt-2 space-y-1">{["Northstar Supplies","Studio Services","Office Systems"].map((x,i)=><div key={x} className="flex justify-between border-b border-white/10 py-1 text-[6px] text-white/60"><span>{x}</span><span style={{color:colors[0]}}>{["+$4,200","-$1,840","+$980"][i]}</span></div>)}</div></>;
