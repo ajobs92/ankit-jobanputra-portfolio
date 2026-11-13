@@ -14,6 +14,7 @@ export const site = {
 
 export const navigation = [
   { label: "Work", href: "/work" },
+  { label: "Visual Lab", href: "/visuals" },
   { label: "Playground", href: "/playground" },
   { label: "Approach", href: "/approach" },
   { label: "Experience", href: "/experience" },
