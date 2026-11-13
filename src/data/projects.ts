@@ -24,29 +24,7 @@ export const projects: Project[] = [
     accent: "#B9D7C6", visual: "servertra", liveUrl: "https://servertra.com"
   },
   {
-    number: "03", slug: "education-360", title: "Education 360",
-    category: "EdTech", discipline: ["SaaS & Enterprise", "Operations"],
-    status: "In progress", summary: "A multi-stakeholder education management ecosystem for learners, educators and institutions.",
-    problem: "Education operations can become fragmented across student records, attendance, learning activity and institutional reporting.",
-    solution: "A connected workspace that makes key education journeys and institutional information easier to coordinate.",
-    capabilities: ["Student and educator workspaces", "Attendance and learning workflows", "Institution administration", "Progress analytics", "Parent communication concepts"],
-    role: "Product planning and cross-functional delivery",
-    evidenceNote: "Product initiative previously discussed. Feature implementation and launch status to be confirmed.",
-    accent: "#A9C9FF", visual: "education"
-  },
-  {
-    number: "04", slug: "mobility-ai", title: "Mobility AI",
-    category: "Mobility / AI", discipline: ["AI & ML", "Operations"],
-    status: "In progress", summary: "An intelligent operations concept for fleet visibility, routing and mobility performance.",
-    problem: "Fleet operators need a coherent view of vehicles, routes, maintenance signals and service performance.",
-    solution: "A mobility operations workspace that brings fleet activity and operational decisions into one view.",
-    capabilities: ["Fleet overview", "Vehicle and route visibility", "Maintenance signals", "Driver operations", "Performance analytics"],
-    role: "Product planning and delivery coordination",
-    evidenceNote: "Product initiative previously discussed. Scope, technical implementation and outcomes require confirmation.",
-    accent: "#F4B183", visual: "mobility"
-  },
-  {
-    number: "05", slug: "digital-government-transformation", title: "Digital Government Transformation",
+    number: "03", slug: "digital-government-transformation", title: "Digital Government Transformation",
     category: "GovTech / Enterprise", discipline: ["GovTech", "SaaS & Enterprise"],
     status: "Professional case study", summary: "A public-sector digital delivery perspective focused on citizen-facing services and municipal web experiences.",
     problem: "Public institutions need accessible, maintainable digital experiences that align content, services and stakeholder needs.",
@@ -57,7 +35,7 @@ export const projects: Project[] = [
     accent: "#D6C8FF", visual: "civic"
   },
   {
-    number: "06", slug: "rfp-intelligence", title: "AI-Powered RFP Intelligence",
+    number: "04", slug: "rfp-intelligence", title: "AI-Powered RFP Intelligence",
     category: "AI / Procurement", discipline: ["AI & ML", "SaaS & Enterprise", "Operations"],
     status: "Concept", summary: "A procurement workspace that turns lengthy bid documents into structured requirements and action.",
     problem: "Teams spend significant time extracting deadlines, eligibility conditions, mandatory forms and submission requirements from RFP documents.",
@@ -68,7 +46,7 @@ export const projects: Project[] = [
     accent: "#C4F36A", visual: "document"
   },
   {
-    number: "07", slug: "agent-orchestration", title: "Autonomous AI Agent Orchestration",
+    number: "05", slug: "agent-orchestration", title: "Autonomous AI Agent Orchestration",
     category: "Agentic AI", discipline: ["AI & ML", "SaaS & Enterprise"],
     status: "Concept", summary: "A control plane for coordinating specialised agents with observable, human-governed execution.",
     problem: "Multi-step AI workflows become difficult to trust when task ownership, tool access and failure recovery are opaque.",
@@ -79,7 +57,7 @@ export const projects: Project[] = [
     accent: "#B7C5FF", visual: "agents"
   },
   {
-    number: "08", slug: "revenue-intelligence-crm", title: "Revenue Intelligence CRM",
+    number: "06", slug: "revenue-intelligence-crm", title: "Revenue Intelligence CRM",
     category: "SalesTech", discipline: ["AI & ML", "SaaS & Enterprise", "Operations"],
     status: "Concept", summary: "A revenue workspace for lead prioritisation, opportunity context and sales execution.",
     problem: "Sales teams often lack a unified view of lead quality, next actions and forecast confidence.",
@@ -90,7 +68,7 @@ export const projects: Project[] = [
     accent: "#E9B6D1", visual: "crm"
   },
   {
-    number: "09", slug: "healthcare-operations", title: "Healthcare Operations Intelligence",
+    number: "07", slug: "healthcare-operations", title: "Healthcare Operations Intelligence",
     category: "HealthTech", discipline: ["AI & ML", "SaaS & Enterprise", "Operations"],
     status: "Concept", summary: "An operational coordination concept for appointments, capacity and administrative flow.",
     problem: "Operational teams need to coordinate schedules and resources while protecting sensitive patient information.",
@@ -101,7 +79,7 @@ export const projects: Project[] = [
     accent: "#9DDDD1", visual: "health"
   },
   {
-    number: "10", slug: "fraud-risk-engine", title: "Fraud Detection & Risk Engine",
+    number: "08", slug: "fraud-risk-engine", title: "Fraud Detection & Risk Engine",
     category: "FinTech", discipline: ["AI & ML", "FinTech", "Operations"],
     status: "Concept", summary: "An investigation workspace for suspicious transaction patterns and risk review.",
     problem: "Risk teams need to prioritise alerts, inspect context and document decisions without treating model outputs as certainty.",
@@ -112,7 +90,7 @@ export const projects: Project[] = [
     accent: "#F2A79B", visual: "risk"
   },
   {
-    number: "11", slug: "enterprise-support-copilot", title: "Enterprise AI Support Copilot",
+    number: "09", slug: "enterprise-support-copilot", title: "Enterprise AI Support Copilot",
     category: "Generative AI", discipline: ["AI & ML", "SaaS & Enterprise"],
     status: "Concept", summary: "A support assistant concept grounded in enterprise knowledge with source-aware responses.",
     problem: "Support teams lose time searching fragmented documentation and repeating common answers.",
@@ -123,7 +101,7 @@ export const projects: Project[] = [
     accent: "#C4F36A", visual: "copilot"
   },
   {
-    number: "12", slug: "supply-chain-control-tower", title: "Supply Chain Control Tower",
+    number: "10", slug: "supply-chain-control-tower", title: "Supply Chain Control Tower",
     category: "Logistics / SaaS", discipline: ["SaaS & Enterprise", "Operations"],
     status: "Concept", summary: "An operational view of shipments, inventory signals and supply-chain exceptions.",
     problem: "Distributed supply chain information makes it difficult to spot delays and coordinate response.",
@@ -134,7 +112,7 @@ export const projects: Project[] = [
     accent: "#E7C77D", visual: "supply"
   },
   {
-    number: "13", slug: "automation-studio", title: "No-Code Automation Studio",
+    number: "11", slug: "automation-studio", title: "No-Code Automation Studio",
     category: "Business Automation", discipline: ["AI & ML", "SaaS & Enterprise", "Operations"],
     status: "Concept", summary: "A visual workflow builder for connecting triggers, conditions and business actions.",
     problem: "Repeated administrative work is often trapped in manual handoffs and disconnected tools.",
@@ -145,7 +123,7 @@ export const projects: Project[] = [
     accent: "#B7C5FF", visual: "workflow"
   },
   {
-    number: "14", slug: "bi-command-center", title: "Business Intelligence Command Center",
+    number: "12", slug: "bi-command-center", title: "Business Intelligence Command Center",
     category: "Analytics", discipline: ["SaaS & Enterprise", "Operations"],
     status: "Concept", summary: "An executive view of business performance across revenue, operations and customer activity.",
     problem: "Leaders often receive metrics in disconnected reports with inconsistent definitions and timing.",
@@ -156,7 +134,7 @@ export const projects: Project[] = [
     accent: "#A7D5B8", visual: "analytics"
   },
   {
-    number: "15", slug: "talent-intelligence", title: "AI Recruitment & Talent Intelligence",
+    number: "13", slug: "talent-intelligence", title: "AI Recruitment & Talent Intelligence",
     category: "HRTech", discipline: ["AI & ML", "SaaS & Enterprise", "Operations"],
     status: "Concept", summary: "A recruiting operations concept for structured candidate review and hiring coordination.",
     problem: "Recruiting teams manage candidate information, feedback and scheduling across multiple tools.",
@@ -167,7 +145,7 @@ export const projects: Project[] = [
     accent: "#D7B9FF", visual: "talent"
   },
   {
-    number: "16", slug: "security-operations", title: "Cybersecurity Operations Platform",
+    number: "14", slug: "security-operations", title: "Cybersecurity Operations Platform",
     category: "Cybersecurity", discipline: ["AI & ML", "SaaS & Enterprise", "Operations"],
     status: "Concept", summary: "A security operations workspace for alert triage, incident context and response coordination.",
     problem: "Security teams need to prioritise high-signal incidents and preserve context across investigation handoffs.",
@@ -178,7 +156,7 @@ export const projects: Project[] = [
     accent: "#E6A5A5", visual: "security"
   },
   {
-    number: "17", slug: "smart-city-digital-twin", title: "Smart City Digital Twin",
+    number: "15", slug: "smart-city-digital-twin", title: "Smart City Digital Twin",
     category: "IoT / Smart Cities", discipline: ["SaaS & Enterprise", "Operations"],
     status: "Concept", summary: "A city systems visualisation concept connecting infrastructure signals to operational views.",
     problem: "City operations span many services, making it difficult to understand dependencies and changing conditions.",
@@ -189,7 +167,7 @@ export const projects: Project[] = [
     accent: "#9BC9D9", visual: "city"
   },
   {
-    number: "18", slug: "personal-finance-advisor", title: "AI Personal Finance Advisor",
+    number: "16", slug: "personal-finance-advisor", title: "AI Personal Finance Advisor",
     category: "Personal Finance", discipline: ["AI & ML", "FinTech"],
     status: "Concept", summary: "A personal finance planning interface for budgets, cash flow and scenario exploration.",
     problem: "People need a clearer view of spending patterns and trade-offs between day-to-day expenses and goals.",
