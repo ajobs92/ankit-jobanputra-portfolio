@@ -14,15 +14,15 @@ export function Header() {
           <span className="text-[15px] font-semibold tracking-[.13em]">ANKIT<span className="accent-text">.</span></span>
           <span className="mt-1 text-[9px] tracking-[.19em] text-white/45">JOBANPUTRA</span>
         </Link>
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {navigation.map(item => <Link key={item.href} href={item.href} className="text-[12px] text-white/65 transition hover:text-[#c4f36a]">{item.label}</Link>)}
         </nav>
-        <Link href="/contact" className="hidden items-center gap-2 rounded-full bg-[#c4f36a] px-5 py-3 text-[11px] font-semibold tracking-wide text-[#111312] transition hover:bg-[#d7ff8b] md:inline-flex">
+        <Link href="/contact" className="hidden items-center gap-2 rounded-full bg-[#c4f36a] px-5 py-3 text-[11px] font-semibold tracking-wide text-[#111312] transition hover:bg-[#d7ff8b] lg:inline-flex">
           LET'S TALK <ArrowUpRight size={14}/>
         </Link>
-        <button aria-label={open ? "Close menu" : "Open menu"} className="text-white md:hidden" onClick={() => setOpen(!open)}>{open ? <X/> : <Menu/>}</button>
+        <button aria-label={open ? "Close menu" : "Open menu"} className="text-white lg:hidden" onClick={() => setOpen(!open)}>{open ? <X/> : <Menu/>}</button>
       </div>
-      {open && <nav className="border-t border-white/10 bg-[#151917] px-6 py-5 md:hidden">
+      {open && <nav className="border-t border-white/10 bg-[#151917] px-6 py-5 lg:hidden">
         {[{label:"Home",href:"/"},...navigation,{label:"Contact",href:"/contact"}].map(item => <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="block border-b border-white/10 py-4 text-lg">{item.label}</Link>)}
         <p className="pt-5 text-xs text-white/40">{site.availability}</p>
       </nav>}
