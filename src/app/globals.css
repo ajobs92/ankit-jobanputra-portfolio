@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -17,7 +18,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "DM Sans", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 ::selection { background: var(--accent); color: #111312; }
@@ -26,13 +27,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
 .container-shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
 .eyebrow {
-  font-family: "Courier New", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
   line-height: 1.5;
   letter-spacing: .16em;
   text-transform: uppercase;
   color: var(--accent);
 }
+.display-title, .section-title, h1, h2, h3 { font-family: "Space Grotesk", "DM Sans", sans-serif; }
 .display-title {
   font-size: clamp(3.3rem, 8.1vw, 7.8rem);
   line-height: .94;
@@ -46,6 +48,9 @@ button { cursor: pointer; }
   font-weight: 500;
 }
 .grid-line { border-top: 1px solid var(--line); }
+.orbit-one { animation: orbit 42s linear infinite; transform-origin: center; }
+.orbit-two { animation: orbit 30s linear infinite reverse; transform-origin: center; }
+@keyframes orbit { to { transform: rotate(360deg); } }
 .muted { color: #a4aaa4; }
 .accent-text { color: var(--accent); }
 .panel {
@@ -63,5 +68,5 @@ button { cursor: pointer; }
   .display-title { font-size: clamp(3.1rem, 16vw, 5rem); }
 }
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
