@@ -55,7 +55,15 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             <a href="https://servertra.com/eligibility-checker" target="_blank" rel="noreferrer" className="border border-white/10 p-4 transition hover:border-[#c4f36a]/50"><span className="eyebrow">03 / ELIGIBILITY</span><span className="mt-3 block text-sm text-white">Eligibility checker ↗</span></a>
           </div>
         </section>}
-        <section><p className="eyebrow">05 / NEXT STEPS</p><h2 className="mt-4 text-3xl tracking-[-.05em]">From concept to validated product</h2><p className="mt-5 max-w-3xl text-base leading-8 text-white/55">The next stage is to validate assumptions with the people who experience the problem, define measurable success criteria, test the highest-risk workflow and then plan delivery against real technical and operational constraints.</p></section>
+        {project.slug === "servertra-funding-platform" ? <section>
+          <p className="eyebrow">06 / CONTINUOUS IMPROVEMENT</p>
+          <h2 className="mt-4 text-3xl tracking-[-.05em]">Make guidance easier to trust and act on</h2>
+          <p className="mt-5 max-w-3xl text-base leading-8 text-white/55">The next product priorities are to keep scheme references current, make source and last-reviewed information easy to understand, test the eligibility journey with real business profiles, and measure how effectively visitors move from discovery to a useful enquiry.</p>
+        </section> : <section>
+          <p className="eyebrow">05 / NEXT STEPS</p>
+          <h2 className="mt-4 text-3xl tracking-[-.05em]">From concept to validated product</h2>
+          <p className="mt-5 max-w-3xl text-base leading-8 text-white/55">The next stage is to validate assumptions with the people who experience the problem, define measurable success criteria, test the highest-risk workflow and then plan delivery against real technical and operational constraints.</p>
+        </section>}
       </div>
       <aside className="h-fit border-t border-white/15 pt-5">
         <p className="eyebrow">RELATED PROJECT</p><p className="mt-3 text-lg">{next.title}</p><Link href={`/work/${next.slug}`} className="mt-4 inline-flex items-center gap-2 text-xs text-[#c4f36a]">Next case study <ArrowUpRight size={14}/></Link>
