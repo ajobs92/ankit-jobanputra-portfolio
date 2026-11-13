@@ -37,11 +37,8 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
         <p className="eyebrow">DISCIPLINES</p><div className="mt-3 flex flex-wrap gap-2">{project.discipline.map(item=><span key={item} className="border border-white/15 px-2 py-1 text-[10px] text-white/55">{item}</span>)}</div>
       </aside>
     </div>
-    {(project.liveUrl || project.prototypeUrl) && <div className="mt-8 flex flex-wrap gap-3">
-      {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#c4f36a] px-5 py-3 text-xs font-semibold text-[#111312] transition hover:bg-[#d8ff8c]">Visit live website <ExternalLink size={14}/></a>}
-      {project.prototypeUrl && <Link href={project.prototypeUrl} className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-xs text-white/75 transition hover:border-[#c4f36a] hover:text-[#c4f36a]">Explore product concept <FlaskConical size={14}/></Link>}
-    </div>}
-    <div className="mt-14"><ProjectArt project={project}/></div>
+    {project.liveUrl && <div className="mt-8"><a href={project.liveUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#c4f36a] px-5 py-3 text-xs font-semibold text-[#111312] transition hover:bg-[#d8ff8c]">Visit live website <ExternalLink size={14}/></a></div>}
+    <div className="mt-14">{project.slug === "servertra-funding-platform" ? <ServertraPreview/> : <ProjectArt project={project}/>}</div>
     <div className="mt-14 grid gap-14 lg:grid-cols-[1fr_280px]">
       <div className="space-y-14">
         <section><p className="eyebrow">01 / THE CHALLENGE</p><h2 className="mt-4 text-3xl tracking-[-.05em]">The problem to solve</h2><p className="mt-5 max-w-3xl text-base leading-8 text-white/55">{project.problem}</p></section>
